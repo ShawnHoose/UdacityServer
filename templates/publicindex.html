@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-4" id="categories">
+
+    <h1>Categories</h1>
+    {% for c in categories %}
+      <a href="{{url_for('indCat', category = c.name)}}">{{ c.name }}</a><br />
+    {% endfor %}
+
+  </div>
+  <div class="col-sm-6" id="items">
+
+      <h1>Recently Added</h1>
+      {% for i in items %}
+        <a href="{{url_for('indItem', category = i.Categories.name , item = i.Items.name)}}">{{ i.Items.name }}</a><br />
+      {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

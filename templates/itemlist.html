@@ -1,0 +1,40 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div class="row">
+
+  <div class="col-sm-4" id="categories">
+    <div class="col-sm-12">
+      <h1>Categories</h1>
+      {% for c in categories %}
+        <a href="{{url_for('indCat', category = c.name)}}">{{ c.name }}</a><br />
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="col-sm-6" id="items">
+    <div class="col-sm-12">
+      <h1>{{ category.name }}
+        {% if count > 1 %}
+        <span id="count"> ({{ count }} items)</span>
+        {% else %}
+        <span id="count"> ({{ count }} item)</span>
+        {% endif %}
+      </h1>
+      {% for i in items %}
+        <a href="{{url_for('indItem', category = category.name, item = i.name)}}">{{ i.name }}</a><br />
+      {% endfor %}
+      <br />
+      <div class="btn" id="create">
+        <a id="createBtn" href="{{url_for('createItem')}}">Add Item</a>
+      </div>
+      <br /><br /><br />
+      <div class='btn' id="delete">
+        <a id="deleteBtn" href="{{url_for('deleteCat', category=category.name)}}">Delete {{ category.name }} Category</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

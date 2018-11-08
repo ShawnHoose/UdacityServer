@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-12 text-center" id="loginForm">
+
+    <form id="newUser" method='POST' action="{{url_for('new_user')}}">
+      <span>Username</span><br />
+      <input type='text' name='username' size='30' height='10'required/><br /><br />
+
+      <span>Password</span><br />
+      <input type='password' name='password' size='30' height='10'required/><br /><br />
+      <button id="login" type='submit'>Create User</button><br /><br />
+
+    </form>
+  </div>
+</div>
+{% endblock %}

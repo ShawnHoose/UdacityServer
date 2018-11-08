@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div id="item" class="row">
+  <div class="col-sm-8">
+
+    <div>
+      <h1>{{item.name}}</h1>
+      <p>{{item.description}}</p>
+    </div>
+
+  </div>
+
+  <div class="col-sm-4 text-right bottom-align-text">
+    <div class="btn" id="edit">
+      <a id="editBtn" href="{{url_for('editItem', category=category.name, item=item.name)}}">Edit</a>
+    </div>
+
+    <div class="btn" id="delete">
+      <a id="deleteBtn" href="{{url_for('deleteItem', category=category.name, item=item.name)}}">Delete</a>
+    </div>
+
+  </div>
+
+  <div id="back" class="col-sm-12 text-center">
+    <a href="{{url_for('indCat', category = category.name)}}">Return to {{category.name}}</a>
+    <br />
+  </div>
+
+</div>
+{% endblock %}

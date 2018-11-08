@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row">
+
+  <div class="col-sm-12 text-center" id="item">
+    <h1>Delete {{item.name}}</h1>
+    <form action="{{url_for('deleteItem', item=item.name, category=category.name)}}" method='POST'>
+      <span>Are you sure?</span><br /><br />
+        <input id="delete" class="delete btn" type='submit' name='delete' value='Delete' />
+    </form>
+    <br />
+  </div>
+
+</div>
+{% endblock %}

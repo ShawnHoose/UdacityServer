@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row">
+
+  <div class="col-sm-12 text-center" id="item">
+    <h1>Create a new item</h1>
+    <form id="createForm" action="{{url_for('createItem')}}" method='POST'>
+      <span>Name:</span><br />
+      <input type='text' size='30' name='name' placeholder='Item name' required pattern="[\S\w\d\s]+[\S]+"/><br /><br />
+
+      <span>Description:</span><br />
+      <input type='text' size='30' name='description' placeholder='Item description' required pattern="[\S\w\d\s]+[\S]+"/><br /><br />
+
+      <span>Category:</span><br />
+      <select id="selector" name="category" onchange="myFunction()" required>
+        {% for c in categories %}
+          <option value="{{c.name}}">
+            {{c.name}}
+          </option>
+        {% endfor %}
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Create" />
+      <br /><br />
+    </form>
+  </div>
+</div>
+{% endblock %}

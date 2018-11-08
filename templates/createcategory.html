@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row">
+
+  <div class="col-sm-12 text-center" id="item">
+    <form id="createForm" action="{{url_for('createCat')}}" method='POST'>
+      <span>Name:</span><br />
+      <input type='text' size='30' name='name' required pattern="[\S\w\d\s]+[\S]+"/><br /><br />
+
+      <input type="submit" value="Submit" required/>
+      <br />
+    </form>
+    <br />
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block content %}
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="21646899288-kq56hslarbcjileg37p4rsf9i8kpi6f6.apps.googleusercontent.com">
+
+<div class="row">
+  <div class="col-sm-12 text-center" id="loginForm">
+
+    <button id="google" class="g-signin2" type="submit" data-theme="dark" data-onsuccess="onSignIn">Google Sign In</button>
+
+    <hr class="hr-text" data-content=" or " />
+
+    <form id="internalLogin" method='POST' action="{{url_for('showLogin')}}">
+      <span>Username</span><br />
+      <input type='text' name='username' size='30'/><br /><br />
+
+      <span>Password</span><br />
+      <input type='password' name='password' size='30'/><br /><br />
+      <button id="login" type='submit'>Login</button>
+    </form>
+    <div id="createLogin">
+      <a href="{{url_for('new_user')}}">Create an account</a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="row">
+  <div id="item" class="col-sm-12 text-center">
+    <h1>Edit item: {{ item.name }}</h1>
+    <h4>Not all fields are required</h4>
+
+    <form id="createForm" action="{{url_for('editItem', item=item.name, category=category.name)}}" method='POST'>
+      <span>Name:</span><br />
+      <input type='text' size='30' name='name' placeholder='{{item.name}}' pattern="[\S\w\d\s]+[\S]+"/><br /><br />
+
+      <span>Description:</span><br />
+      <input type='text' size='30' name='description' placeholder='{{item.description}}' pattern="[\S\w\d\s]+[\S]+"/><br /><br />
+
+      <span>Category:</span><br />
+      <select id="selector" name="category" onchange="myFunction()">
+        {% for c in categories %}
+          {% if c.id == item.cat_id%}
+            <option value="{{c.name}}" selected>
+              {{c.name}}
+            </option>
+          {% else %}
+            <option value="{{c.name}}">
+              {{c.name}}
+            </option>
+          {% endif %}
+        {% endfor %}        
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+      <br /><br />
+
+    </form>
+  </div>
+</div>
+{% endblock %}

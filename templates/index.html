@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-4" id="categories">
+
+    <h1>Categories</h1>
+    {% for c in categories %}
+      <a href="{{url_for('indCat', category = c.name)}}">{{ c.name }}</a><br />
+    {% endfor %}
+
+    <div class='btn' id="create">
+      <a id="createBtn" href="{{url_for('createCat')}}">Create Category</a>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6" id="items">
+
+    <h1>Recently Added</h1>
+
+    <br />
+    {% for i in items %}
+      <a href="{{url_for('indItem', category = i.Categories.name , item = i.Items.name)}}">{{ i.Items.name }}</a><br />
+    {% endfor %}
+
+    <div class='btn items' id="create">
+      <a id="createBtn" href="{{url_for('createItem')}}">Create Item</a>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

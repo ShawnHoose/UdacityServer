@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+.row{
+  position:relative;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+h1 > a{
+  color: black !important;
+}
+
+h1 > a:hover{
+  color:black !important;
+}
+
+#content {
+  margin: auto;
+  width: 80%;
+  margin-top: 2em;
+}
+
+#head{
+  background: rgba(31, 218, 139, 0.8);
+}
+
+#footer{
+  margin-top: 2em;
+}
+
+.container {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#create{
+  background: white;
+  border: solid 1px rgba(38, 235, 14, 0.8);
+  border-radius: 5px;
+  margin-top:1em;
+}
+
+
+#create a{
+  color: rgba(38, 235, 14, 0.8) !important;
+  text-decoration:none;
+}
+
+#create:hover{
+  background: rgba(38, 235, 14, 0.8);
+}
+
+#create:hover a{
+  color: white !important;
+}
+
+#delete{
+  background: white;
+  border: solid 1px rgba(255, 31, 41, 1.0);
+  border-radius: 5px;
+}
+
+#delete a{
+  color: rgba(255, 31, 41, 1.0) !important;
+}
+
+#delete:hover{
+  background: rgba(255, 31, 41, 1.0);
+}
+
+#delete:hover a{
+  color: white !important;
+}
+
+#edit{
+  background: white;
+  border: solid 1px rgba(31, 147, 255, 1.0);
+  border-radius: 5px;
+}
+
+#edit a{
+  color: rgba(31, 147, 255, 1.0) !important;
+}
+
+#edit:hover{
+  background: rgba(31, 147, 255, 1.0);
+}
+
+#edit:hover a{
+  color: white !important;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  border: solid rgba(254, 193, 76, 1.0) 1px;
+  border-radius: .6em;
+  background: rgba(254, 193, 76, 1.0);
+  padding: .5em .75em .5em .75em;
+}
+
+.btn:hover {
+  transform: translate(-2px,-2px);
+  color: white;
+}
+
+.flash{
+  background: rgba(120, 255, 125, 0.8);
+  color: black;
+}
+
+#categories {
+  margin-right: 2em;
+  margin-top: 0;
+  margin-left: auto;
+}
+
+#items{
+  margin-right:auto;
+  padding-bottom:0.25em;
+  padding-right:0;
+  margin-left: 2em;
+}
+
+#categories, #items, #item, #loginForm{
+  border: solid black 1px;
+  border-radius: 0.75em;
+  -webkit-box-shadow: 23px 24px 20px -12px rgba(194,194,194,0.57);
+  -moz-box-shadow: 23px 24px 20px -12px rgba(194,194,194,0.57);
+  box-shadow: 23px 24px 20px -12px rgba(194,194,194,0.57);
+}
+
+#categories a, #items a{
+  color: rgba(255, 96, 8, 1.0);
+}
+
+#categories a:hover, #items a:hover{
+  color: rgba(214, 76, 0, 1);
+}
+
+#loginForm{
+  padding-top:2em;
+}
+
+#createLogin{
+  margin-top:2em;
+}
+
+.hr-text{
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+}
+
+.hr-text:before{
+  content: '';
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 75%;
+  height: 1px;
+  margin-left:14%;
+}
+
+.hr-text:after{
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  background-color: #fcfcfa;
+}
+
+#count {
+  color: rgba(205, 205, 205, 1);
+  font-size: 0.5em;
+}
+
+.bottom-align-text{
+  position:absolute;
+  bottom:1.5em;
+  right:1.5em;
+}
+
+.delete {
+  color: rgba(255, 31, 41, 1.0);
+}
+
+.items{
+  margin-bottom:1em;
+}
+
+#google{
+  display: float;
+  margin:auto;
+}
