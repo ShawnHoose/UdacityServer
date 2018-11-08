@@ -62,9 +62,9 @@ and began the firewall with `ufw enable`
 
 ## 3rd Party Resources used
 
-*Troubleshooting initial setup of the server was done through https://github.com/harushimo/linux-server-configuration.
+* Troubleshooting initial setup of the server was done through https://github.com/harushimo/linux-server-configuration.
 
-*Updated .conf file configuration from https://hk.saowen.com/a/0a0048ca7141440d0553425e8df46b16cdf4c13f50df4c5888256393d34bb1b9
+* Updated .conf file configuration from https://hk.saowen.com/a/0a0048ca7141440d0553425e8df46b16cdf4c13f50df4c5888256393d34bb1b9
 
-*All other troubleshooting was accomplished through the error logs and Udacity Coursework.
+* All other troubleshooting was accomplished through the error logs and Udacity Coursework.
 
